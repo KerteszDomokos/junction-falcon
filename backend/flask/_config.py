@@ -1,11 +1,13 @@
 PRODUCTION = False
 
-DATABASE_NAME = None if PRODUCTION else "database_name"
 
 SQLALCHEMY_DATABASE_URI = (
-    "add_connection_URI"
-    + DATABASE_NAME
+    "sqlite:////junction-falcon/backend/flask/db/users.db"
 )
-SESSION_TOKEN_SALT = "session_salt_here"
+SESSION_TOKEN_SALT = "B8CA4E4C960286BE863E847E9EF92FFA34DF1C7C858196DC4ED97FF5A1ED21DD"
 
 DATA_MAX_INTERVAL_LENGTH_SECONDS = 90 * 24 * 3600  # 90 days
+
+
+
+
