@@ -21,11 +21,7 @@ def create_user(json: dict):
 
 
 def auth_password(json: dict):
-    """
-    Authenticate a user by email and password.
-
-    returns: User
-    """
+    
 
     return user
 
@@ -42,11 +38,8 @@ def auth_session(json: dict = None, session_token: str = None):
 
 
 def create_session(user: User, json: dict, ip_address: str = None):
-    """
-    Create a new session for a user with a hashed session key and store it in db.
-
-    returns: session key (non-hashed)
-    """
+    
+    session=Session(ip_address=ip_address, )
 
     return session_token
 
