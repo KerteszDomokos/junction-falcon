@@ -25,14 +25,22 @@ Output : átlagostól eltérő faucetek kimutatása
 #### adatfelépítés
 houses
     apartmans[20 db] 
-        (['people', 
+        (['people', (hány ember)
         'Hydractiva_shower', 
             measurements
                 Consumption', 'Temp', 'FlowTime', 'Power_Consumption', 'TimeStamp
         'Kitchen_optima_faucet', 
+             measurements
+                Consumption', 'Temp', 'FlowTime', 'Power_Consumption', 'TimeStamp
         'Optima_faucet', 
+             measurements
+                Consumption', 'Temp', 'FlowTime', 'Power_Consumption', 'TimeStamp
         'Washing_machine', 
+             measurements
+                Consumption', 'Temp', 'FlowTime', 'Power_Consumption', 'TimeStamp
         'Dishwasher'])
+             measurements
+                Consumption', 'Temp', 'FlowTime', 'Power_Consumption', 'TimeStamp
 
 
 
