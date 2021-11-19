@@ -4,6 +4,7 @@
 bemutatás
 
 
+
 ### oras
 db adatok 
 input:
@@ -12,6 +13,14 @@ input:
 - vízmennyiségű
 OUTPUT
 - Mikor fűtsük a bojlert
+
+Problem 1: bojleres
+Input : Database, Lebontás type(nap, hét, hónap)
+Output: Grafikon hogy mikor mennyi fogasztanak MapPlotLib
+
+Problem 2: leaking faucets
+Input : Database
+Output : átlagostól eltérő faucetek kimutatása
 
 
 ### sievo
