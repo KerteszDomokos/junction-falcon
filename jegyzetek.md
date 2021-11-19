@@ -43,6 +43,8 @@ agressziószűrés
 
 
 
+## NOde
 
+json -> python
 
 
