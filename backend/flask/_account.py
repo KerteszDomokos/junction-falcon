@@ -1,13 +1,15 @@
 from _models import db, User, Session
+import mysql.connector
 
+mydb = mysql.connector.connect(
+email="email"
+password_hash="password_hash"
+)
 def create_user(
     json: dict,
 ):
-    """
-    Create a new user and add them to the database.
+    sql = "INSERT INTO users (email, password_hash) VALUES (%s, %s)"
 
-    returns: User
-    """
     return user
 
 

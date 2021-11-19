@@ -3,18 +3,17 @@ from sqlalchemy import ForeignKey
 from sqlalchemy.orm import RelationshipProperty
 from sqlalchemy.dialects.mysql import (
     INTEGER,
-    BIGINT,
-    BOOLEAN,
-    VARCHAR,
-    CHAR,
+    TEXT,
+    TEXT,
+    TEXT,
 )
 
 
 class User(db.Model):
     id = db.Column(INTEGER, autoincrement=True, primary_key=True)
-    email = db.Column(VARCHAR(254), unique=True, nullable=False)
-    password_salt = db.Column(CHAR(64), nullable=False)
-    password_hash = db.Column(CHAR(64), nullable=False)
+    email = db.Column(TEXT, unique=True, nullable=False)
+    password_salt = db.Column(TEXT, nullable=False)
+    password_hash = db.Column(TEXT, nullable=False)
 
 
 class Session(db.Model):

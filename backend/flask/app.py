@@ -13,9 +13,9 @@ def parse_request():
     
 @app.route('/user', methods=['GET', 'POST'])
 def parse_request():
-    data = request.json # data is empty
+    data = request.json 
     print (data)
-    return data
+    return "200"
     
     
 @app.route("/")
