@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import "../Styling/Box.css";
 import Draggable from "react-draggable";
+import LineTo from "react-lineto";
 
 let szamozas = 1;
 
 function Box(props) {
   const [statt, setStatt] = useState(true);
+  const [parameters, setParameters] = useState([]);
 
   const kattintas = (event) => {
     if (statt) {
@@ -27,6 +29,9 @@ function Box(props) {
   const draggingends = () => {
     setStatt(true);
   };
+  const clickedondot = () => {
+    console.log("Fuck");
+  };
   return (
     <React.Fragment>
       <div className="drawing-area" onClick={kattintas}>
@@ -40,8 +45,8 @@ function Box(props) {
               draggable="true"
             >
               <div className="circle">
-                <span class="dot1"></span>
-                <span class="dot2"></span>
+                <span className="dot1" onClick={clickedondot}></span>
+                <span className="dot2" onClick={clickedondot}></span>
               </div>
             </div>
           </Draggable>

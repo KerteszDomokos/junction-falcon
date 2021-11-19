@@ -56,6 +56,9 @@
   border-radius: 50%;
   display: inline-block;
 }
+.dot1:hover {
+  background-color: rgb(185, 218, 42);
+}
 
 .dot2 {
   height: 1.5vw;
@@ -65,4 +68,7 @@
   background-color: rgb(243, 2, 2);
   border-radius: 50%;
   display: inline-block;
+}
+.dot2:hover {
+  background-color: rgb(185, 218, 42);
 }
