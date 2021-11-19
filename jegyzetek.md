@@ -31,17 +31,13 @@ INPUT lvl2
 OUTPUT
 - Mennyi co2
 
-
-
-### vikes
-szövegfeismerés
-
 ### loodeck 10
 mint miro
 
 ### 8 elisa
 vizualizálás
 bemenet -> png
+
 
 
 
