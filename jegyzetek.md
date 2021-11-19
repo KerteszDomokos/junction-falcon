@@ -22,6 +22,20 @@ Problem 2: leaking faucets
 Input : Database
 Output : átlagostól eltérő faucetek kimutatása
 
+#### adatfelépítés
+houses
+    apartmans[20 db] 
+        (['people', 
+        'Hydractiva_shower', 
+            measurements
+                Consumption', 'Temp', 'FlowTime', 'Power_Consumption', 'TimeStamp
+        'Kitchen_optima_faucet', 
+        'Optima_faucet', 
+        'Washing_machine', 
+        'Dishwasher'])
+
+
+
 
 ### sievo
 egy euró típusonként mennyi co2
@@ -55,5 +69,4 @@ agressziószűrés
 ## NOde
 
 json -> python
-
 
