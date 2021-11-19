@@ -1,15 +1,22 @@
+from os import abort
 from _models import db, User, Session
-import mysql.connector
+from secrets import token_hex
+from hashlib import sha256
 
-mydb = mysql.connector.connect(
-email="email"
-password_hash="password_hash"
-)
-def create_user(
-    json: dict,
-):
-    sql = "INSERT INTO users (email, password_hash) VALUES (%s, %s)"
-
+def create_user(json: dict):
+    if "email" in json and "password_hash" in json:
+        print ("Valid request")
+        password=json["password_hash"]
+        password_salt = token_hex(32)
+        password_hash = sha256((password + password_salt).encode("ascii")).hexdigest()
+        
+        user=User(email=json["email"], password_hash=password_hash,password_salt=password_salt)
+        db.session.add(user)
+        db.session.commit()
+    else:
+        print("[/user] Not valid request: keys error")
+        abort
+    
     return user
 
 

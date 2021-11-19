@@ -1,5 +1,6 @@
-from startup import app
+from startup import app, db
 from flask import request
+import _account
 
 import endpoints_account
 
@@ -8,14 +9,14 @@ import endpoints_account
 def parse_request():
     data = request.json # data is empty
     print (data)
+    
     return data
     
     
 @app.route('/user', methods=['GET', 'POST'])
-def parse_request():
-    data = request.json 
-    print (data)
-    return "200"
+def usercreate():
+    user=_account.create_user(request.json)
+    return user.email
     
     
 @app.route("/")
