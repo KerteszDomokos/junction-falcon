@@ -42,6 +42,8 @@ houses
              measurements
                 Consumption', 'Temp', 'FlowTime', 'Power_Consumption', 'TimeStamp
 
+grafikon:
+cons/flow time - idő graf eszközönként+generikl
 
 
 
