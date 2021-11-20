@@ -45,6 +45,8 @@ houses
 grafikon:
 cons/flow time - idő graf eszközönként+generikl
 
+exapmle:
+{"Consumption":"27.752436","Temp":"40.922577","FlowTime":"172.66763","Power_Consumption":"1.1630955","TimeStamp":"2020-01-30T09:25:23"}
 
 
 ### sievo
