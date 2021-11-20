@@ -2,6 +2,9 @@ import json
 import numpy as np
 import matplotlib.pyplot as plt
 from os import walk
+# from shapely.geometry import Polygon
+
+import folium
 
 
 
@@ -63,6 +66,50 @@ def oras():
 
 
 def elisa():
-    pass
+    f=open("F:/junction/junction-falcon/4G/4G_tahtiluokka_1.json")
+    data=json.load(f)    
+    f.close()
+    
+    pol=[]
+    for i in range(len(data["features"])):
+        pol.append(data["features"][i]["geometry"]["coordinates"][0])
+    
+    
+    print(len(pol))
+    
+    xl=[]
+    yl=[]
+    for i in range(len(data["features"][0]["geometry"]["coordinates"][0])):
+        xl.append(data["features"][0]["geometry"]["coordinates"][0][i][0])
+        yl.append(data["features"][0]["geometry"]["coordinates"][0][i][1])
+    d=data["features"][0]["geometry"]
+    polygon = zip(xl, yl)
 
-oras()
+    m = folium.Map([50.854457, 4.377184], zoom_start=5, tiles='cartodbpositron')
+    
+    for i in range(len(data["features"])):
+        folium.GeoJson(data["features"][i]["geometry"]).add_to(m)
+    
+    
+    # folium.LatLngPopup().add_to(m)
+    # folium.GeoJson(data).add_to(map)
+    path='F:/junction/junction-falcon/backend/flask/vis/map.html'
+    m.save(path)
+    
+    # path="F:/junction/junction-falcon/backend/flask/vis/"
+    # filenames = next(walk(path), (None, None, []))[2]  # [] if no file
+    # nums=[]
+    # for i in range(len(filenames)):
+    #     try:
+    #         nums.append(int(filenames[i].replace(figname,"").replace(".png","")))
+    #     except:
+    #         pass
+    # nums.sort()
+    # id=len(nums)
+
+    # print (filenames)
+    # plt.savefig(path+figname+str(id)+".png")
+    
+elisa()
+#elisa()
+#poligon lista(id) -> join és szín
