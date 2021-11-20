@@ -102,3 +102,9 @@ dist
 
 # TernJS port file
 .tern-port
+
+backend/flask/db/oras-db.json
+
+backend/flask/db/elisa_liikkuvuus_dataset.csv
+
+backend/flask/vis/map.html
