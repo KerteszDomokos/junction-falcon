@@ -1,6 +1,8 @@
 import json
 import numpy as np
 import matplotlib.pyplot as plt
+from os import walk
+
 
 
 def oras():
@@ -31,21 +33,36 @@ def oras():
             x=x+1
         
         
-    figname="cons-flowt"
+    figname="cons-flowt-all"
     # print(h[0]["apartments"][0]["Kitchen_optima_faucet"]["measurements"][0].keys())#
     print (len(cons),len(flowt),len(timest))
     fig, ax = plt.subplots()
-
+    
+    cons, flowt = zip(*sorted(zip(cons, flowt)))        
+    
+    
         # Using set_dashes() to modify dashing of an existing line
-    line1, = ax.plot(cons, flowt, label='figname')
+    line1, = ax.plot(cons, flowt, label=figname)
     ax.legend()
     plt.show()
-    plt.savefig("F:/junction/junction-falcon/backend/flask/vis/"+figname+".png")
+
+    path="F:/junction/junction-falcon/backend/flask/vis/"
+    filenames = next(walk(path), (None, None, []))[2]  # [] if no file
+    nums=[]
+    for i in range(len(filenames)):
+        try:
+            nums.append(int(filenames[i].replace(figname,"").replace(".png","")))
+        except:
+            pass
+    nums.sort()
+    id=len(nums)
+
+    print (filenames)
+    plt.savefig(path+figname+str(id)+".png")
 
 
 
 def elisa():
     pass
-
 
 oras()
