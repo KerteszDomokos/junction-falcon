@@ -106,3 +106,5 @@ dist
 backend/flask/db/oras-db.json
 
 backend/flask/db/elisa_liikkuvuus_dataset.csv
+
+backend/flask/db/gen/

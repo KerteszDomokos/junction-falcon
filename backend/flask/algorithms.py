@@ -2,7 +2,7 @@ import json
 import numpy as np
 import matplotlib.pyplot as plt
 from os import walk
-
+from datetime import datetime
 
 
 def oras():
@@ -62,7 +62,21 @@ def oras():
 
 
 
-def elisa():
+def elisa_create_pngs():
+    f=open("db/4G_tahtiluokka_1.json")
+    data=json.load(f)
+    for i in range(0,len(data["features"])):
+        print(coord)
+        #coord.append(coord[0]) #repeat the first point to create a 'closed loop'
+
+        #xs, ys = zip(*coord) #create lists of x and y values
+
+        #plt.figure()
+       ## plt.plot(xs,ys) 
+        #plt.savefig("db/gen/4G_tahtiluokka_"+str(i)+".png")
+        #f.close()
+        print("Done : " + str(i))
     pass
 
-oras()
+elisa_create_pngs()
+
